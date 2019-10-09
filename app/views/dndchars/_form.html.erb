@@ -1,15 +1,17 @@
-<div class="section">
+<!-- <section class="section">
+  <div class="columns">
   <%= simple_form_for @dndchar do |f| %>
-    <div class="field">
-      <div class="control">
-        <%= f.input :charname, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-      </div>
-    </div>
 
     <div class="field">
       <div class="control">
-        <%= f.input :charrace, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }  %>
+        <%= f.input :charname, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
       </div>
+
+    <div class="field">
+      <div class="control">
+          <%= f.input :charrace, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }  %>
+    </div>
     </div>
 
     <div class="field">
@@ -27,3 +29,58 @@
     <%= f.button :submit, class: "button is-primary" %>
   <% end %>
 </div>
+</section>
+
+<div class="section">
+  <div class="columns">
+    <%= simple_form_for @dndchar do |f| %>
+
+      <div class="field">
+        <div class="control">
+          <%= f.input :charname, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <%= f.input :charrace, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }  %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <%= f.input :charclass, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <%= f.input :charlevel, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+-->
+<section class="section">
+<%= simple_form_for @dndchar do |f| %>
+<div class="columns">
+
+  <div class="column">
+    <%= f.input :charname, :placeholder => "Name",input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }%>
+  </div>
+  <div class="column">
+    <%= f.input :charrace, :placeholder => "Race", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }  %>
+  </div>
+  <div class="column">
+    <%= f.input :charclass, :placeholder => "Class", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+  </div>
+  <div class="column">
+    <%= f.input :charlevel, :placeholder => "Level", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+  </div>
+</div>
+    <%= f.button :submit, class: "button is-primary" %>
+    <%end %>
+
+    </section>
