@@ -22,6 +22,20 @@ class DndcharsController < ApplicationController
     @dndchar = Dndchar.find(params[:id])
   end
 
+  def update
+    @dndchar = Dndchar.find(params[:id])
+    if @dndchar.update(dndchar_params)
+      redirect_to @dndchar
+    else
+      render 'edit'
+    end
+  end
+
+  def edit
+    @dndchar = Dndchar.find(params[:id])
+  end
+
+
   private
   def dndchar_params
     params.require(:dndchar).permit(:charname, :charrace, :charclass, :charlevel)
