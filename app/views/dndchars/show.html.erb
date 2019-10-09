@@ -47,9 +47,9 @@
             <div class="column">Class: <%= @dndchar.charclass %></div>
           </div>
           <div class="columns">
-            <div class="column is-one-third">Alignment: Lawful Good</div>
-            <div class="column">Experience Points: 500 </div>
-            <div class="column">Faction: N/A </div>
+            <div class="column is-one-third">Alignment: <%= @dndchar.charalign %></div>
+            <div class="column">Experience Points: <%= @dndchar.charexp %> </div>
+            <div class="column">Faction: <%= @dndchar.charfaction %> </div>
           </div>
           <!--<div class="coment-count">
           <span class="tag is-rounded"><%# #comment count %> </span>
@@ -70,14 +70,14 @@
     <div class="card">
       <div class="card-content">
         <div class="columns">
-          <div class="column is-one-third">Strength: 18</div>
-          <div class="column">Dexterity: 15</div>
-          <div class="column">Constitution: 15</div>
+          <div class="column is-one-third">Strength: <%= @dndchar.charstr %></div>
+          <div class="column">Dexterity: <%= @dndchar.chardex %></div>
+          <div class="column">Constitution: <%= @dndchar.charcon %></div>
         </div>
         <div class="columns">
-          <div class="column is-one-third">Intelligence: 8</div>
-          <div class="column">Wisdom: 10 </div>
-          <div class="column">Charisma: 2 </div>
+          <div class="column is-one-third">Intelligence: <%= @dndchar.charint %></div>
+          <div class="column">Wisdom: <%= @dndchar.charwis %> </div>
+          <div class="column">Charisma: <%= @dndchar.charchar %> </div>
         </div>
       </div>
     </div>
@@ -95,14 +95,14 @@
     <div class="card">
       <div class="card-content">
         <div class="columns">
-          <div class="column is-one-third">Strength: 18</div>
-          <div class="column">Dexterity: 15</div>
-          <div class="column">Constitution: 15</div>
+          <div class="column is-one-third">Strength: <%= @dndchar.charsavestr %></div>
+          <div class="column">Dexterity: <%= @dndchar.charsavedex %></div>
+          <div class="column">Constitution: <%= @dndchar.charsavecon %></div>
         </div>
         <div class="columns">
-          <div class="column is-one-third">Intelligence: 8</div>
-          <div class="column">Wisdom: 10 </div>
-          <div class="column">Charisma: 2 </div>
+          <div class="column is-one-third">Intelligence: <%= @dndchar.charsaveint %></div>
+          <div class="column">Wisdom: <%= @dndchar.charsavewis %> </div>
+          <div class="column">Charisma: <%= @dndchar.charsavechar %> </div>
         </div>
       </div>
     </div>
@@ -120,28 +120,28 @@
     <div class="card">
       <div class="card-content">
         <div class="columns">
-          <div class="column is-one-sixth">Acrobatics: 8</div>
-          <div class="column">Animal Handling: 5</div>
-          <div class="column">Arcana: 8</div>
-          <div class="column">Athletics: 10 </div>
-          <div class="column">Deception: 8</div>
-          <div class="column">History: 10 </div>
+          <div class="column is-one-sixth">Acrobatics: <%= @dndchar.characro %></div>
+          <div class="column">Animal Handling: <%= @dndchar.charanimal %></div>
+          <div class="column">Arcana: <%= @dndchar.chararcana %></div>
+          <div class="column">Athletics: <%= @dndchar.charathletic %> </div>
+          <div class="column">Deception: <%= @dndchar.chardeception %></div>
+          <div class="column">History: <%= @dndchar.charhistory %> </div>
         </div>
         <div class="columns">
-          <div class="column is-one-sixth">Insight: 8</div>
-          <div class="column">Intimidation: 5</div>
-          <div class="column">Investigation: 8</div>
-          <div class="column">Medicine: 10 </div>
-          <div class="column">Nature: 8</div>
-          <div class="column">Perception: 10 </div>
+          <div class="column is-one-sixth">Insight: <%= @dndchar.charinsight %></div>
+          <div class="column">Intimidation: <%= @dndchar.charintim %></div>
+          <div class="column">Investigation: <%= @dndchar.charinv %></div>
+          <div class="column">Medicine: <%= @dndchar.charmed %> </div>
+          <div class="column">Nature: <%= @dndchar.charnature %></div>
+          <div class="column">Perception: <%= @dndchar.charperc %> </div>
         </div>
         <div class="columns">
-          <div class="column is-one-sixth">Performance: 8</div>
-          <div class="column">Persuasion: 5</div>
-          <div class="column">Religion: 8</div>
-          <div class="column">Sleight of Hand: 10 </div>
-          <div class="column">Stealth: 8</div>
-          <div class="column">Survival: 10 </div>
+          <div class="column is-one-sixth">Performance: <%= @dndchar.charperform %></div>
+          <div class="column">Persuasion: <%= @dndchar.charpersuasion %></div>
+          <div class="column">Religion: <%= @dndchar.charreligion %></div>
+          <div class="column">Sleight of Hand: <%= @dndchar.charslight %> </div>
+          <div class="column">Stealth: <%= @dndchar.charstealth %></div>
+          <div class="column">Survival: <%= @dndchar.charsurvive %> </div>
         </div>
       </div>
     </div>
