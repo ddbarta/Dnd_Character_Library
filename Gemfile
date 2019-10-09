@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'bulma-rails', '~> 0.7.5'
+gem 'simple_form', '~> 5.0', '>= 5.0.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -44,6 +46,9 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'better_errors', '~> 2.5', '>= 2.5.1'
+  gem 'guard', '~> 2.15', '>= 2.15.1'
+  gem 'guard-livereload', '~> 2.5', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
