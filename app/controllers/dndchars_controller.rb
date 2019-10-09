@@ -43,6 +43,10 @@ class DndcharsController < ApplicationController
   end
 
   private
+
+  dndfields = [:charname, :charrace, :charclass, :charlevel, :charalign, :charexp, :charfaction, :charstr, :chardex, :charcon, :charint, :charwis, :charchar, :charsavestr, :charsavedex, :charsaveint, :charsavewis, :charsavechar, :characro,
+  :charanimal, :characana, :charalthletic, :chardeception, :charhistory, :charinsight, :charinv, :charmed, :charnature, :charperc, :charperform, :charpersuasion, :charreligion, :charslight, :charstealth, :charsurvive]
+
   def dndchar_params
     params.require(:dndchar).permit(:charname, :charrace, :charclass, :charlevel)
   end
