@@ -1,90 +1,24 @@
-<!-- <section class="section">
-  <div class="columns">
-  <%= simple_form_for @dndchar do |f| %>
-
-    <div class="field">
-      <div class="control">
-        <%= f.input :charname, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-    </div>
-      </div>
-
-    <div class="field">
-      <div class="control">
-          <%= f.input :charrace, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }  %>
-    </div>
-    </div>
-
-    <div class="field">
-      <div class="control">
-        <%= f.input :charclass, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-      </div>
-    </div>
-
-    <div class="field">
-      <div class="control">
-        <%= f.input :charlevel, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-      </div>
-    </div>
-
-    <%= f.button :submit, class: "button is-primary" %>
-  <% end %>
-</div>
-</section>
-
-<div class="section">
-  <div class="columns">
-    <%= simple_form_for @dndchar do |f| %>
-
-      <div class="field">
-        <div class="control">
-          <%= f.input :charname, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-        </div>
-      </div>
-
-      <div class="field">
-        <div class="control">
-          <%= f.input :charrace, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }  %>
-        </div>
-      </div>
-
-      <div class="field">
-        <div class="control">
-          <%= f.input :charclass, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-        </div>
-      </div>
-
-      <div class="field">
-        <div class="control">
-          <%= f.input :charlevel, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
--->
-
 <!-- Basic Character Info -->
 <section class="section">
-<%= simple_form_for @dndchar do |f| %>
+  <%= simple_form_for @dndchar do |f| %>
     <p class="level-item">
       <strong class="title is-6 is-italic">Basic Character Information</strong>
     </p>
     <hr />
-<div class="columns">
-  <div class="column">
-    <%= f.input :charname,label: "Name", :placeholder => "Name",input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }%>
-  </div>
-  <div class="column">
-    <%= f.input :charrace,label: "Race", :placeholder => "Race", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }  %>
-  </div>
-  <div class="column">
-    <%= f.input :charclass,label: "Class", :placeholder => "Class", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-  </div>
-  <div class="column">
-    <%= f.input :charlevel,label: "Level", :placeholder => "Level", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-  </div>
-</div>
+    <div class="columns">
+      <div class="column">
+        <%= f.input :charname,label: "Name", :placeholder => "Name",input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }%>
+      </div>
+      <div class="column">
+        <%= f.input :charrace,label: "Race", :placeholder => "Race", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }  %>
+      </div>
+      <div class="column">
+        <%= f.input :charclass,label: "Class", :placeholder => "Class", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+      </div>
+      <div class="column">
+        <%= f.input :charlevel,label: "Level", :placeholder => "Level", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+      </div>
+    </div>
     <div class="columns">
       <div class="column">
         <%= f.input :charname,label: "Alignment", :placeholder => "Alignment",input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }%>
@@ -96,7 +30,7 @@
         <%= f.input :charclass,label: "Experience Points", :placeholder => "Experience Points", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
       </div>
     </div>
-    <%end %>
+  <%end %>
 </section>
 
 <!-- Character Levels -->
@@ -226,6 +160,6 @@
         <%= f.input :charname,label: "Survival", :placeholder => "[1-20]",input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' }%>
       </div>
     </div>
-     <%= f.button :submit,'Creat new character' ,class: "button is-primary" %>
+    <%= f.button :submit,'Edit character' ,class: "button is-primary" %>
   <%end %>
 </section>
