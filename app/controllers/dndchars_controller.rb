@@ -1,7 +1,7 @@
 class DndcharsController < ApplicationController
 
   def index
-
+    @dndchars = Dndchar.all.order("created_at DESC")
   end
 
   def new
@@ -16,6 +16,10 @@ class DndcharsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def show
+    @dndchar = Dndchar.find(params[:id])
   end
 
   private

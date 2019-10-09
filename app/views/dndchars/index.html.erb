@@ -1,1 +1,24 @@
 <h1 class="title">DnD Character Library.</h1>
+
+
+<div class="section">
+  <div class="container">
+    <% @dndchars.each do |dnd| %>
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4"><%= link_to dnd.charname, dnd  %></p>
+            </div>
+          </div>
+          <div class="content">
+            level: <%= dnd.charlevel %>
+          </div>
+          <!--<div class="comment-count">
+            <span class="tag is-rounded"><%#= dndchar.charlevel %></span>
+          </div>-->
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
