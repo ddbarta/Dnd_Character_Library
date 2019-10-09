@@ -1,7 +1,6 @@
-<h1 class="title">DnD Character Library.</h1>
+<% content_for :page_title, "Characters" %>
 
-
-<div class="section">
+<section class="section">
   <div class="container">
     <% @dndchars.each do |dnd| %>
       <div class="card">
@@ -14,11 +13,11 @@
           <div class="content">
             level: <%= dnd.charlevel %>
           </div>
-          <!--<div class="comment-count">
-            <span class="tag is-rounded"><%#= dndchar.charlevel %></span>
-          </div>-->
+          <!--<div class="coment-count">
+          <span class="tag is-rounded"><%# #comment count %> </span>
+        </div>-->
         </div>
       </div>
     <% end %>
   </div>
-</div>
+</section>
