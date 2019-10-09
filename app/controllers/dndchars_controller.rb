@@ -35,6 +35,12 @@ class DndcharsController < ApplicationController
     @dndchar = Dndchar.find(params[:id])
   end
 
+  def destroy
+    @dndchar = Dndchar.find(params[:id])
+    @dndchar.destroy
+
+    redirect_to dndchars_path
+  end
 
   private
   def dndchar_params
