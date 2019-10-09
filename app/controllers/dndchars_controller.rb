@@ -1,15 +1,16 @@
 class DndcharsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
-    @dndchars = Dndchar.all.order("created_at DESC")
+    @dndchars = current_user.dndchars.all.order("created_at DESC")
   end
 
   def new
-    @dndchar = Dndchar.new
+    @dndchar = current_user.dndchars.build
   end
 
   def create
-    @dndchar = Dndchar.new(dndchar_params)
+    @dndchar = current_user.dndchars.build(dndchar_params)
 
     if @dndchar.save
       redirect_to @dndchar
@@ -19,7 +20,7 @@ class DndcharsController < ApplicationController
   end
 
   def show
-    @dndchar = Dndchar.find(params[:id])
+    @dndchar = current_user.dndchars.find(params[:id])
   end
 
   def update
@@ -47,7 +48,7 @@ class DndcharsController < ApplicationController
   def dndchar_params
     params.require(:dndchar).permit(:charname, :charrace, :charclass, :charlevel, :charalign, :charexp, :charfaction, :charstr, :chardex,
                                     :charcon, :charint, :charwis, :charchar, :charsavestr, :charsavedex, :charsaveint, :charsavewis, :charsavecon, :charsavechar, :characro,
-                                    :charanimal, :chararcana, :charalthletic, :chardeception, :charhistory, :charinsight, :charintim, :charinv, :charmed, :charnature, :charperc,
+                                    :charanimal, :chararcana, :charathletic, :chardeception, :charhistory, :charinsight, :charintim, :charinv, :charmed, :charnature, :charperc,
                                     :charperform, :charpersuasion, :charreligion, :charslight, :charstealth, :charsurvive)
   end
 end

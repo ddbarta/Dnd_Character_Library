@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-background-grey-lighter">
   <head>
     <title>DndLibrary</title>
     <%= csrf_meta_tags %>
@@ -8,52 +8,60 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  <section class="hero is-primary is-medium">
-    <!-- Hero head: will stick at the top-->
-    <div class="hero-head">
-      <nav class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <%= link_to 'Main Menu', root_path, class: "navbar-item" %>
-            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div id="navbarMenuHeroA" class="navbar-menu">
-            <div class="navbar-end">
-              <%= link_to "Create New Character", new_dndchar_path, class: "navbar-item" %>
-            </div>
-          </div>
-        </div>
-      </nav>
+  <body >
+  <% if flash[:notice] %>
+    <div class="notification is-primary global-notification">
+      <p class="notice"><%= notice %></p>
     </div>
-
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title">
-          <%= yield :page_title %>
-        </h1>
+  <% end %>
+  <% if flash[:alert] %>
+    <div class="notification is-danger global-notification">
+      <p class="alert"><%= alert %></p>
+    </div>
+  <% end %>
+  <nav class="navbar is-info">
+    <div class="navbar-brand">
+      <%= link_to root_path, class: "navbar-item" do %>
+        <h1 class="title is-5">DnD Character Library</h1>
+      <% end %>
+      <div class="navbar-burger burger" data-target="navbarExample">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
 
-  </section>
+    <div id="navbarExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <% if user_signed_in? %>
+              <p class="control">
+                <%= link_to "Edit Profile", edit_user_registration_path, class: "button is-info" %>
+              </p>
+             <p class="control">
+                <%= link_to "Create New Character", new_dndchar_path, class: "button is-info" %>
+             </p>
+              <div class="navbar-end">
+              <p>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-info" %>
+              </p>
+              </div>
+            <% else %>
+              <p class="control">
+                <%= link_to 'Sign In', new_user_session_path, class: "button is-info" %>
+              </p>
+              <p class="control">
+                <%= link_to 'Sign Up', new_user_registration_path, class: "button is-info" %>
+              </p>
 
-  <!-- alerts -->
-  <% if flash[:notice] %>
-  <div class="notification is-primary global-notification">
-    <p class="notice"><%= notice %></p>
-  </div>
-  <% end %>
-  <% if flash[:alert] %>
-  <div class="notification is-danger global-notification">
-    <p class="alert"><%= alert %></p>
-  </div>
-  <%end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-    <%= yield %>
+  <%= yield %>
   </body>
 </html>
