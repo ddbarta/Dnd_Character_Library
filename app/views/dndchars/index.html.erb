@@ -10,8 +10,13 @@
               <p class="title is-4"><%= link_to dnd.charname, dnd  %></p>
             </div>
           </div>
-          <div class="content">
-            level: <%= dnd.charlevel %>
+          <!--<div class="content">
+            level: <%= dnd.charlevel %> race: <%= dnd.charrace %>
+          </div> -->
+          <div class="columns">
+            <div class="column is-one-third">Level: <%= dnd.charlevel %></div>
+            <div class="column">Race: <%= dnd.charrace %></div>
+            <div class="column">Class: <%= dnd.charclass %></div>
           </div>
           <!--<div class="coment-count">
           <span class="tag is-rounded"><%# #comment count %> </span>

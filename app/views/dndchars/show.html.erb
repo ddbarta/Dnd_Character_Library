@@ -22,8 +22,29 @@
    </nav>
     <hr />
 
-    <div class="content">
+
+
+    <!-- <div class="content">
       Level: <%= @dndchar.charlevel %>
-    </div>
+    </div> -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+      <div class="card">
+        <div class="card-content">
+          <div class="columns">
+            <div class="column is-one-third">Level: <%= @dndchar.charlevel %></div>
+            <div class="column">Race: <%= @dndchar.charrace %></div>
+            <div class="column">Class: <%= @dndchar.charclass %></div>
+          </div>
+          <!--<div class="coment-count">
+          <span class="tag is-rounded"><%# #comment count %> </span>
+        </div>-->
+        </div>
+      </div>
   </div>
 </section>
