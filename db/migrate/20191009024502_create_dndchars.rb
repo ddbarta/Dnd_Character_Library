@@ -39,6 +39,8 @@ class CreateDndchars < ActiveRecord::Migration[5.1]
       t.integer :charslight
       t.integer :charstealth
       t.integer :charsurvive
+      t.text :chardescription
+      t.text :charnotes
       t.timestamps
     end
   end

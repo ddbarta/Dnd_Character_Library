@@ -49,6 +49,6 @@ class DndcharsController < ApplicationController
     params.require(:dndchar).permit(:charname, :charrace, :charclass, :charlevel, :charalign, :charexp, :charfaction, :charstr, :chardex,
                                     :charcon, :charint, :charwis, :charchar, :charsavestr, :charsavedex, :charsaveint, :charsavewis, :charsavecon, :charsavechar, :characro,
                                     :charanimal, :chararcana, :charathletic, :chardeception, :charhistory, :charinsight, :charintim, :charinv, :charmed, :charnature, :charperc,
-                                    :charperform, :charpersuasion, :charreligion, :charslight, :charstealth, :charsurvive)
+                                    :charperform, :charpersuasion, :charreligion, :charslight, :charstealth, :charsurvive, :chardescription, :charnotes)
   end
 end

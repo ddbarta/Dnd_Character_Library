@@ -159,5 +159,20 @@
       </div>
     </div>
 </section>
+
+  <section class="section">
+    <p class="level-item">
+      <strong class="title is-6 is-italic">Notes & Description</strong>
+    </p>
+    <hr />
+  <div class="columns is-one-half">
+    <div class="column">
+      <%= f.input :chardescription,label: "Description", :placeholder => "Description goes here", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+    <div class="column">
+      <%= f.input :charnotes,label: "Notes", :placeholder => "Notes go here", input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
+</section>
   <%= f.button :submit, 'Create character', class: "button is-primary" %>
   <%end %>

@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 20191009105532) do
     t.integer "charslight"
     t.integer "charstealth"
     t.integer "charsurvive"
+    t.text "chardescription"
+    t.text "charnotes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
